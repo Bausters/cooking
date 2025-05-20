@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heath's Dog Empire</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">🐶 Heath's Dog Empire</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="toys.html">Toys</a></li>
+        <li><a href="beds.html">Beds</a></li>
+        <li><a href="sale.html">Sale</a></li>
+        <li><a href="importance.html">Why It Matters</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">🛒<span id="cart-count">0</span></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Big Barks. Bigger Deals.</h1>
+      <p>Dog toys, beds & chaos. All in one place.</p>
+      <a href="sale.html" class="btn flashy">🔥 Check The Sale 🔥</a>
+    </section>
+
+    <section class="products">
+      <h2>Best Sellers</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="https://via.placeholder.com/200" alt="Chewy Bone" />
+          <h3>Chewy Bone</h3>
+          <p>$14.99</p>
+          <button onclick="buyNow('Chewy Bone', 14.99)">Buy Now</button>
+          <button class="add-cart" onclick="addToCart('Chewy Bone', 14.99)">🛒</button>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/200" alt="Fluffy Bed" />
+          <h3>Fluffy Bed</h3>
+          <p>$49.99</p>
+          <button onclick="buyNow('Fluffy Bed', 49.99)">Buy Now</button>
+          <button class="add-cart" onclick="addToCart('Fluffy Bed', 49.99)">🛒</button>
+        </div>
+        <!-- Add 30 more products as needed -->
+      </div>
+    </section>
+
+    <section class="ads">
+      <div class="flash-ad">🚨 FREE SHIPPING on orders over $50! 🚨</div>
+      <div class="flash-ad">💥 NEW BED DROP! Get comfy now 💥</div>
+    </section>
+
+    <section class="brand-story">
+      <h2>How It All Started</h2>
+      <p>One day, Heath stepped on a soggy tennis ball. That day, a vision was born—to create a world where dogs live in plush, chewable luxury. With wild ideas and a dream, Heath’s Dog Empire rose from the backyard to the web. Now it’s your dog’s turn to thrive.</p>
+    </section>
+  </main>
+
+  <div id="cart" class="cart">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+    <form id="checkout-form">
+      <input type="text" placeholder="Name" required />
+      <input type="text" placeholder="Shipping Address" required />
+      <input type="email" placeholder="Email" required />
+      <button type="submit">Checkout</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Heath's Dog Empire. No bones about it.</p>
+  </footer>
+</body>
+</html>
